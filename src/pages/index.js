@@ -134,42 +134,130 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+// import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-import Heading from '@theme/Heading';
+// import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+// function HomepageHeader() {
+//   const {siteConfig} = useDocusaurusContext();
+//   return (
+//     <header className={clsx('hero hero--primary', styles.heroBanner)}>
+//       <div className="container">
+//         <Heading as="h1" className="hero__title">
+//           {siteConfig.title}
+//         </Heading>
+//         <p className="hero__subtitle">{siteConfig.tagline}</p>
+//         {/* <div className={styles.buttons}>
+//           <Link
+//             className="button button--secondary button--lg"
+//             to="/docs/intro">
+//             Docusaurus Tutorial - 5min ⏱️
+//           </Link>
+//         </div> */}
+//       </div>
+//     </header>
+//   );
+// }
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+  // return (
+  //   <Layout
+  //     title={`${siteConfig.title}`}
+  //     description="Description will go into a meta tag in <head />">
+  //     {/* <HomepageHeader /> */}
+  //     <main>
+  //       <HomepageFeatures />
+  //     </main>
+  //   </Layout>
+  // );
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      permalink={'/'}
+      description={'Set up a modern web app by running one command.'}
+    >
+      <div className={clsx('hero hero--dark', styles.heroBanner)}>
+        <div className="container">
+          <video
+            className={clsx(styles.heroBannerLogo, 'margin-vert--md', 'fit-width')}
+            autostart autoPlay loop muted
+            alt="ML"
+            src={useBaseUrl('img/ML.mp4')}
+            type="video/mp4" 
+          />
+          <video
+            className={clsx(styles.heroBannerLogo, 'margin-vert--md', 'fit-width')}
+            autostart autoPlay loop muted
+            alt="DL"
+            src={useBaseUrl('img/DL.mp4')}
+            type="video/mp4" 
+          />
+          <video
+            className={clsx(styles.heroBannerLogo, 'margin-vert--md', 'fit-width')}
+            autostart autoPlay loop muted
+            alt="RL"
+            src={useBaseUrl('img/RL.mp4')}
+            type="video/mp4" 
+          />
+          <h1 className="hero__title">{siteConfig.title}</h1>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <div className={styles.getStarted}>
+            <Link
+              className="button button--outline button--primary button--lg"
+              to={useBaseUrl('docs/logistics')}
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className={styles.features}>
+        <div className="container">
+          <div className="row">
+            <div className="col col--12">
+              <h2>
+                Overview
+              </h2>
+              <p>
+              Decision Making has made massive strides over the past decade, from monumental achievements in gaming(Atari and Go) to the seamless control of robots in diverse applications. This is a graduate-level course on Decision Making,  with a dedicated focus on practical applications and recent research breakthroughs. Students will be introduced to a broad set of topics, covering essential formalisms, latest concepts in Imitation Learning, the nuances of Behavior Cloning, and the powerful realm of Reinforcement Learning (RL). Applications across industries such as gaming, robotics, and industry will be discussed to offer a holistic perspective of the impact of decision-making in various domains. This course will involve several coding home-works where you will implement various algorithms and a final project. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.gettingStartedSection}>
+        <div className="container padding-vert--xl text--left">
+          <h2>
+            Staff
+          </h2>
+          <div className="row">
+            <div className="col col--3">
+              <h3>
+                <a href="https://www.lerrelpinto.com/">Lerrel Pinto</a>
+              </h3>
+              <img
+                className={styles.featureImage}
+                alt="Lerrel Pinto"
+                src={useBaseUrl('img/lerrel.jpeg')}
+              />
+              {/* <p>Instructor</p> */}
+            </div>
+            <div className="col col--3 col--offset-3">
+            <h3>
+                <a href="https://siddhanthaldar.github.io/">Siddhant Haldar</a>
+              </h3>
+              <img
+                className={styles.featureImage}
+                alt="Siddhant Haldar"
+                src={useBaseUrl('img/siddhant.jpg')}
+              />
+              {/* <p>Teaching Assistant</p> */}
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }
