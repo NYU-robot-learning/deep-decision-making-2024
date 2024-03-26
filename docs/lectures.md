@@ -15,8 +15,8 @@ title: Course Schedule
 | 3/15 | Policy Optimization | Part 1: MC-based optimization (CEM) <br/> Part 2: Differentiable versions (REINFORCE) <br/> Part 3: Trust region / proximal policy optimization | | |
 | 3/22 | SPRING BREAK | | | |
 | 3/29 | [Tutorial] Setting up RL environments and training simple RL policies. | | | |
-| 4/5  | Decision making with world models | Part 1: Classical approaches (LQR / iLQR / DDP) <br/> Part 2: Model-based RL <br/> Part 3: case study: Dreamer v3 | | |
-| 4/12 | Decision making with Tree Search | MCTC (AlphaGo, AlphaZero) | | |
-| 4/19 | Revisiting Decision making with expert data | Inverse RL and offline RL | | |
-| 4/26 |  | | | |
-| 5/3  |  | | | |
+| 4/5 | Guest Lecture - Mahi Shafiullah | | | |
+| 4/12  | Decision making with world models | Part 1: Classical approaches (LQR / iLQR / DDP) <br/> Part 2: Model-based RL <br/> Part 3: case study: Dreamer v3 | | |
+| 4/19 | Decision making with Tree Search | MCTC (AlphaGo, AlphaZero) | | |
+| 4/26 | Revisiting Decision making with expert data | Inverse RL and offline RL | | |
+| 5/3  | Course Project Presentations | | | |
